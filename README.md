@@ -32,6 +32,7 @@
 
 </details>
 
+<details>
 <summary>Show Boot EFI Logo</summary>
 
 ### Boot EFI Logo
