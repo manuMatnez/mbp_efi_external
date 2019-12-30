@@ -149,15 +149,16 @@ dnf install macbook12-spi-driver-kmod
 
 ### Sound
 
+**ubuntu / debian package install**  
+```
+apt install wget make gcc linux-headers-generic
+```
+
 **fedora package install**
 ```
 dnf install wget make gcc kernel-devel
 ```
 
-**ubuntu / debian package install**  
-```
-apt install wget make gcc linux-headers-generic
-```
 **build driver**  
 ```
 git clone https://github.com/leifliddy/snd_hda_macbookpro.git  
@@ -167,6 +168,29 @@ reboot
 ```
 
 **If you can't clone https://github.com/leifliddy/snd_hda_macbookpro.git, try: https://github.com/manuMatnez/snd_hda_macbookpro.git**
+
+</details>
+
+<details>
+<summary>Show Sensors</summary>
+
+### Sensors
+
+**ubuntu / debian package install**  
+```
+apt install lm-sensors
+```
+
+**fedora package install**
+```
+dnf install lm_sensors
+```
+
+**Execute**
+
+```
+sensors-detect
+```
 
 </details>
 
