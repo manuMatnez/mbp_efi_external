@@ -134,11 +134,13 @@ dnf install macbook12-spi-driver-kmod
 
 ### WI-FI
 
-**[1]** **Download** [brcmfmac43602-pcie.txt](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/linux_wifi/brcmfmac43602-pcie.txt "brcmfmac43602-pcie")
+**[1]** Maybe **Install brcmfmac** [brcmfmac43602-pcie.bin](https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/plain/brcm/brcmfmac43602-pcie.bin "brcmfmac43602-pcie") for MBP 13.2 [Debian wiki BCM43602](https://wiki.debian.org/brcmfmac "debian wiki") by brcmfmac43602-pcie.bin cpying to the folder /lib/firmware/brcm/
 
-**[2]** Open and edit **brcmfmac43602-pcie.txt**, you will see: macaddr=**xx:xx:xx:xx:xx:xx**. For usage You have to replace it with the macaddress of your device
+**[2]** **Download** [brcmfmac43602-pcie.txt](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/linux_wifi/brcmfmac43602-pcie.txt "brcmfmac43602-pcie")
 
-**[3]** Save **brcmfmac43602-pcie.txt** and move it to **/lib/firmware/brcm**
+**[3]** Open and edit **brcmfmac43602-pcie.txt**, you will see: macaddr=**xx:xx:xx:xx:xx:xx**. For usage You have to replace it with the macaddress of your device
+
+**[4]** Save **brcmfmac43602-pcie.txt** and move it to **/lib/firmware/brcm**
 
 </details>
 
