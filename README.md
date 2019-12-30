@@ -45,7 +45,7 @@
 
 </details>
 
-## Debian (Tested on MBP 13.2) / Ubuntu 18.04.3 LTS
+## Debian Testing (Tested on MBP 13.2) / Ubuntu 18.04.3 LTS
 
 <details>
 <summary>Show Installation</summary>
@@ -63,15 +63,13 @@
 
 **[2]** Run and **install your Debian on your external usb drive** (not the internal)
 
-**[3]** **Force UEFI installation** if you see that message
+**[3]** **Force UEFI installation**
 
 ![force_uefi](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/force_uefi.png)
 
 **[4]** Choose **install grub on the external drive**
 
-**[6,6,7,8] NOT UBUNTU**
-
-**[5]** [NOT UBUNTU] Restart and choose: **Advanced options...** -> **Debian... (Recovery Mode)**
+**[5]** Restart and choose: **Advanced options...** -> **Debian... (Recovery Mode)**
 
 ![grub](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/grub.png)
 
