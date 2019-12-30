@@ -111,7 +111,7 @@ git clone https://github.com/roadrunner2/macbook12-spi-driver.git /usr/src/apple
 dkms install -m applespi -v 0.1
 ```
 
-**If dkms doesn't work try /sbin/dkms**
+**If dkms doesn't work try su -**
 
 **If you can't clone latest https://github.com/roadrunner2/macbook12-spi-driver.git, try: https://github.com/manuMatnez/macbook12-spi-driver.git**
 
