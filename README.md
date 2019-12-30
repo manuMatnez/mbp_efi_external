@@ -92,7 +92,7 @@ dpkg-reconfigure grub-efi-amd64
 
 ### Keyboard and Touchbar
 
-#### [A] DKMS module (Debian & co)
+#### DKMS module (Debian & co)
 
 **[1A]** As root, do the following (all MacBook's and MacBook Pro's except MacBook8,1 (2015)):
 ```
@@ -116,7 +116,7 @@ dkms install -m applespi -v 0.1
 
 **If you can't clone latest https://github.com/roadrunner2/macbook12-spi-driver.git, try: https://github.com/manuMatnez/macbook12-spi-driver.git**
 
-#### [B] Akmods module (RPM Fusion / Red Hat & co)
+#### Akmods module (RPM Fusion / Red Hat & co)
 
 You can build the akmod package from this repository:
 
