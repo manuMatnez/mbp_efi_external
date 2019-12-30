@@ -45,11 +45,7 @@
 
 </details>
 
-## Debian bullseye (Tested on MBP 13.2)
-
-#### What doesn't work:
-- Sound
-- Suspend, Hibernation
+## Debian bullseye (Tested on MBP 13.2) / Ubuntu 18.04.3 LTS
 
 <details>
 <summary>Show Installation</summary>
@@ -73,12 +69,14 @@
 
 **[4]** Choose **install grub on the external drive**
 
-**[5]** Restart and choose: **Advanced options...** -> **Debian... (Recovery Mode)**
+**[6,6,7,8] NOT UBUNTU**
+
+**[5]** [NOT UBUNTU] Restart and choose: **Advanced options...** -> **Debian... (Recovery Mode)**
 
 ![grub](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/grub.png)
 
 **[6]** Type your password and then
-```sh
+```
 dpkg-reconfigure grub-efi-amd64
 ```
 
@@ -97,18 +95,18 @@ dpkg-reconfigure grub-efi-amd64
 #### [A] DKMS module (Debian & co)
 
 **[1A]** As root, do the following (all MacBook's and MacBook Pro's except MacBook8,1 (2015)):
-```sh
+```
 echo -e "\n# applespi\napplespi\nspi_pxa2xx_platform\nintel_lpss_pci" >> /etc/initramfs-tools/modules
 ```
 
 **[1B]** If you're on a MacBook8,1 (2015):
-```sh
+```
 echo -e "\n# applespi\napplespi\nspi_pxa2xx_platform\nspi_pxa2xx_pci" >> /etc/initramfs-tools/modules
 ```
 
 **[2]** For all Macbook's and Macbook Pro's:
 
-```sh
+```
 apt install dkms
 git clone https://github.com/roadrunner2/macbook12-spi-driver.git /usr/src/applespi-0.1
 dkms install -m applespi -v 0.1
@@ -126,9 +124,9 @@ https://pagure.io/fedora-macbook12-spi-driver-kmod
 
 Or use this [copr repository](https://copr.fedorainfracloud.org/coprs/meeuw/macbook12-spi-driver-kmod/):
 ```
-$ dnf copr enable meeuw/macbook12-spi-driver-kmod
+dnf copr enable meeuw/macbook12-spi-driver-kmod
 
-$ dnf install macbook12-spi-driver-kmod
+dnf install macbook12-spi-driver-kmod
 ```
 </details>
 
@@ -142,6 +140,32 @@ $ dnf install macbook12-spi-driver-kmod
 **[2]** Open and edit **brcmfmac43602-pcie.txt**, you will see: macaddr=**xx:xx:xx:xx:xx:xx**. For usage You have to replace it with the macaddress of your device
 
 **[3]** Save **brcmfmac43602-pcie.txt** and move it to **/lib/firmware/brcm**
+
+</details>
+
+<details>
+<summary>Show Sound</summary>
+
+### Sound
+
+**fedora package install**
+```
+dnf install wget make gcc kernel-devel
+```
+
+**ubuntu / debian package install**  
+```
+apt install wget make gcc linux-headers-generic
+```
+**build driver**  
+```
+git clone https://github.com/leifliddy/snd_hda_macbookpro.git  
+cd snd_hda_macbookpro/
+./install.cirrus.driver.sh
+reboot
+```
+
+**If you can't clone https://github.com/leifliddy/snd_hda_macbookpro.git, try: https://github.com/manuMatnez/snd_hda_macbookpro.git**
 
 </details>
 
