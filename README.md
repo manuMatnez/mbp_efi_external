@@ -106,7 +106,7 @@ echo -e "\n# applespi\napplespi\nspi_pxa2xx_platform\nspi_pxa2xx_pci" >> /etc/in
 **[2]** For all Macbook's and Macbook Pro's:
 
 ```
-apt install dkms
+apt install dkms git
 git clone https://github.com/roadrunner2/macbook12-spi-driver.git /usr/src/applespi-0.1
 dkms install -m applespi -v 0.1
 ```
