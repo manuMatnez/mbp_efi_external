@@ -154,6 +154,12 @@ dnf install macbook12-spi-driver-kmod
 apt install wget make gcc linux-headers-generic
 ```
 
+**ubuntu install**  
+
+```
+apt install linux-headers-generic
+```
+
 **fedora package install**
 ```
 dnf install wget make gcc kernel-devel
@@ -201,7 +207,7 @@ sensors-detect
 
 **[1]** **Download** [linux_debian.png](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/EFI_ICONS/linux_debian.png "Debian logo") or draw your own
 
-**[2]** Rename **linux_debian.png** to **.VolumeIcon.icns** and place the icon here: **/boot/efi/.VolumeIcon.icns**
+**[2]** Rename **linux_debian.png** to **.VolumeIcon.icns** and place the icon in the root of your efi partition
 
 **The icon will be in your EFI partition**
 
