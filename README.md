@@ -47,6 +47,9 @@
 
 ## Debian Testing (Tested on MBP 13.2) / Ubuntu 18.04.3 LTS
 
+### Doesn't Work
+Suspend/Hibernate (partial working)
+
 <details>
 <summary>Show Installation</summary>
 
@@ -84,7 +87,21 @@ dpkg-reconfigure grub-efi-amd64
 
 **[8]** When prompted if the NVRAM should be updated **Choose NO**
 
+**[9]** After restarted you can disable suspend and hibernate because they don't work yet using linux from external drive
+
+**Disable**
+```
+systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
+
+**Enable**
+```
+systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
+
 </details>
+
+#### FOR MBP >= 13.1
 
 <details>
 <summary>Show Keyboard and Touchbar</summary>
