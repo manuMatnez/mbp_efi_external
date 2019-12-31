@@ -30,6 +30,10 @@
 
 **[6]** Maybe your keyboard and trackpad won't work untill bootcamp drivers are installed
 
+**[7]** Run regedit.exe as administrator
+
+**[8]** Navigate to "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control" and change the value "PortableOperatingSystem" from 1 to 0
+
 </details>
 
 <details>
