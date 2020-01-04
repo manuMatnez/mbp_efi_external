@@ -37,6 +37,21 @@
 </details>
 
 <details>
+<summary><b>Show Mac Precision Touchpad</b></summary>
+
+### Mac Precision Touchpad
+
+**[1]** **Download the latest RELEASE** [alt mac-precision-touchpad](https://github.com/imbushuo/mac-precision-touchpad "mac-precision-touchpad")
+
+**[2]** Navigate to **x64\ReleaseSigned**
+
+**[3]** Go to **AmtPtpDeviceUniversalPkg** directory
+
+**[4]** Right click **AmtPtpDevice.inf** and install it
+
+</details>
+
+<details>
 <summary><b>Show Boot EFI Logo</b></summary>
 
 ### Boot EFI Logo
