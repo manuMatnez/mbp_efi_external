@@ -1,14 +1,14 @@
-# mbp_efi_external
+# MBP EFI External: OS Installation
 
 ## Windows 10 (Tested on MBP 13.2)
 
 <details>
-<summary>Show Installation</summary>
+  <summary><b>Show Installation</b></summary>
 
 ### Installation
 **[1]** **Download** latest bootcamp drivers
 
-![bootcamp drivers](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/drivers.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/drivers.png" width="500" alt="Bootcamp drivers download">
 
 **[2]** **Create a Virtual Machine** (VirtualBox, Parallels, ...) or **use an existent Windows**
 
@@ -16,15 +16,15 @@
 
 **[4a]** **[Using Rufus]** Select your **usb drive**, **Windows 10 iso** and a **GPT partition scheme**
 
-![rufus example windows to go](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/rufus/windows-to-go-15.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/rufus/windows-to-go-15.png" width="300" alt="Rufus windows to go example">
 
 **[4.1b]** **[Using WinToUSB]** Select your **usb drive** and **GPT for UEFI**
 
-![wintousb gpt 4 uefi](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/wintousb/partitionscheme.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/wintousb/partitionscheme.png" width="500" alt="Wintousb gpt 4 uefi">
 
 **[4.2b]** **[Using WinToUSB]** Check if it is all ok and select **legacy** installation mode
 
-![wintousb legacy installation](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/wintousb/legacy.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/windows/wintousb/legacy.png" width="500" alt="Wintousb legacy installation">
 
 **[5]** When it is finished, restart your system with your usb plugged and alt key pressed
 
@@ -32,12 +32,12 @@
 
 **[7]** Run regedit.exe as administrator
 
-**[8]** Navigate to "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control" and change the value "PortableOperatingSystem" from 1 to 0
+**[8]** Navigate to **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control** and change the value **PortableOperatingSystem** from **1** to **0**
 
 </details>
 
 <details>
-<summary>Show Boot EFI Logo</summary>
+<summary><b>Show Boot EFI Logo</b></summary>
 
 ### Boot EFI Logo
 
@@ -49,36 +49,39 @@
 
 </details>
 
+<hr />
+
 ## Debian Testing (Tested on MBP 13.2) / Ubuntu 18.04.3 LTS
 
-### Doesn't Work
-Suspend/Hibernate (partial working)
+### Doesn't Work:
+- Suspend/Hibernate (partial working) (doesn't work using external drive)
+- Sound (partial working)
 
 <details>
-<summary>Show Installation</summary>
+<summary><b>Show Installation</b></summary>
 
 ### Installation
 **[1]** **Create an EFI Virtual Machine** (VirtualBox, Parallels, ...)
 
 **Virtualbox**
 
-![vbox](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/vboxefi.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/vboxefi.png" width="500" alt="Vbox">
 
 **Parallels**
 
-![parallels](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/parallelsefi.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/parallelsefi.png" width="500" alt="Parallels">
 
 **[2]** Run and **install your Debian on your external usb drive** (not the internal)
 
 **[3]** **Force UEFI installation**
 
-![force_uefi](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/force_uefi.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/force_uefi.png" width="500" alt="Force uefi">
 
 **[4]** Choose **install grub on the external drive**
 
 **[5]** Restart and choose: **Advanced options...** -> **Debian... (Recovery Mode)**
 
-![grub](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/grub.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/grub.png" width="500" alt="Grub">
 
 **[6]** Type your password and then
 ```
@@ -87,7 +90,7 @@ dpkg-reconfigure grub-efi-amd64
 
 **[7]** When prompted if *force extra installation to the EFI removable media path* **Choose YES**
 
-![efi](https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/efi.png)
+<img src="https://raw.githubusercontent.com/manuMatnez/mbp_efi_external/master/images_tutorial/debian/efi.png" width="500" alt="Efi">
 
 **[8]** When prompted if the NVRAM should be updated **Choose NO**
 
@@ -108,7 +111,7 @@ systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.targe
 #### FOR MBP >= 13.1
 
 <details>
-<summary>Show Keyboard and Touchbar</summary>
+<summary><b>Show Keyboard and Touchbar</b></summary>
 
 ### Keyboard and Touchbar
 
@@ -151,7 +154,7 @@ dnf install macbook12-spi-driver-kmod
 </details>
 
 <details>
-<summary>Show WI-FI</summary>
+<summary><b>Show WI-FI</b></summary>
 
 ### WI-FI
 
@@ -166,7 +169,7 @@ dnf install macbook12-spi-driver-kmod
 </details>
 
 <details>
-<summary>Show Sound</summary>
+<summary><b>Show Sound</b></summary>
 
 ### Sound
 
@@ -199,7 +202,7 @@ reboot
 </details>
 
 <details>
-<summary>Show Sensors</summary>
+<summary><b>Show Sensors</b></summary>
 
 ### Sensors
 
@@ -222,7 +225,7 @@ sensors-detect
 </details>
 
 <details>
-<summary>Show Boot EFI Logo</summary>
+<summary><b>Show Boot EFI Logo</b></summary>
 
 ### Boot EFI Logo
 
