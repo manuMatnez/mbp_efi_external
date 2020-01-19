@@ -41,7 +41,7 @@
 
 ### Mac Precision Touchpad
 
-**[1]** **Download the latest RELEASE** [alt mac-precision-touchpad](https://github.com/imbushuo/mac-precision-touchpad "mac-precision-touchpad")
+**[1]** **Download the latest RELEASE** [mac-precision-touchpad](https://github.com/imbushuo/mac-precision-touchpad "mac-precision-touchpad")
 
 **[2]** Navigate to **x64\ReleaseSigned**
 
@@ -152,8 +152,6 @@ dkms install -m applespi -v 0.1
 
 **If dkms doesn't work try su -**
 
-**If you can't clone latest https://github.com/roadrunner2/macbook12-spi-driver.git, try: https://github.com/manuMatnez/macbook12-spi-driver.git**
-
 #### Akmods module (RPM Fusion / Red Hat & co)
 
 You can build the akmod package from this repository:
@@ -211,8 +209,6 @@ cd snd_hda_macbookpro/
 ./install.cirrus.driver.sh
 reboot
 ```
-
-**If you can't clone https://github.com/leifliddy/snd_hda_macbookpro.git, try: https://github.com/manuMatnez/snd_hda_macbookpro.git**
 
 </details>
 
