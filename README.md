@@ -235,13 +235,12 @@ sensors-detect
 
 </details>
 
-
 <details>
 <summary><b>Show FIX "W: Possible missing firmware /lib/firmware/i915"</b></summary>
 
 ### FIX "W: Possible missing firmware /lib/firmware/i915"
 
-[askubuntu]("https://askubuntu.com/questions/811453/w-possible-missing-firmware-for-module-i915-bpo-when-updating-initramfs")
+[src askubuntu](https://askubuntu.com/questions/811453/w-possible-missing-firmware-for-module-i915-bpo-when-updating-initramfs "src askubuntu")
 
 **[1]** **Download** from [git.kernel.org]("https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915") your missing firmwares
 
@@ -251,6 +250,39 @@ sensors-detect
 cp ~/Downloads/*.bin /lib/firmware/i915/
 update-initramfs -u
 ```
+
+</details>
+  
+<details>
+<summary><b>Show FIX Spanish Keyboard</b></summary>
+
+### FIX Spanish Keyboard
+
+[src askubuntu](https://askubuntu.com/questions/446778/left-alt-key-should-work-as-right-alt-key-alt-gr "src askubuntu")
+
+**[1]** **Use**
+
+```
+gsettings set org.gnome.desktop.input-sources xkb-options "['lv3:lalt_switch','lv3:ralt-alt']"
+```
+
+**To reset it**
+
+```
+gsettings reset org.gnome.desktop.input-sources xkb-options
+```
+
+**Or**
+
+```
+gsettings set org.gnome.desktop.input-sources xkb-options "[]"
+```
+
+**Notes:**
+
+To see all available options for all modifier keys make a look on **/usr/share/X11/xkb/rules/xorg.lst**
+
+There are other hacks, I don't recommend. Like changing line include "level3(ralt_switch)" or swapping key codes in **X11/xkb layout files**
 
 </details>
 
