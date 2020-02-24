@@ -235,6 +235,25 @@ sensors-detect
 
 </details>
 
+
+<details>
+<summary><b>Show FIX "W: Possible missing firmware /lib/firmware/i915"</b></summary>
+
+### FIX "W: Possible missing firmware /lib/firmware/i915"
+
+[askubuntu]("https://askubuntu.com/questions/811453/w-possible-missing-firmware-for-module-i915-bpo-when-updating-initramfs")
+
+**[1]** **Download** from [git.kernel.org]("https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915") your missing firmwares
+
+**[2]** **Use**
+
+```
+cp ~/Downloads/*.bin /lib/firmware/i915/
+update-initramfs -u
+```
+
+</details>
+
 <details>
 <summary><b>Show Boot EFI Logo</b></summary>
 
