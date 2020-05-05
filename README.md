@@ -242,7 +242,7 @@ sensors-detect
 
 [src askubuntu](https://askubuntu.com/questions/811453/w-possible-missing-firmware-for-module-i915-bpo-when-updating-initramfs "src askubuntu")
 
-**[1]** **Download** from [git.kernel.org]("https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915") your missing firmwares
+**[1]** **Download** from [git.kernel.org](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915 "bins") your missing firmwares
 
 **[2]** **Use**
 
